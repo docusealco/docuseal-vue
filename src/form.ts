@@ -28,6 +28,26 @@ export default defineComponent({
       required: false,
       default: "",
     },
+    completedButton: {
+      type: Object,
+      required: false,
+      default: () => ({}),
+    },
+    goToLast: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    values: {
+      type: Object,
+      required: false,
+      default: () => ({}),
+    },
+    readonlyFields: {
+      type: Array,
+      required: false,
+      default: () => [],
+    },
   },
   mounted() {
     const scriptId = "docuseal-form-script";
@@ -48,6 +68,11 @@ export default defineComponent({
       "data-email": this.email,
       "data-submitter": this.submitter,
       "data-expand": this.expand,
+      "data-go-to-last": this.goToLast,
+      "data-values": JSON.stringify(this.values),
+      "data-readonly-fields": this.readonlyFields.join(","),
+      "data-completed-button-title": this.completedButton.title,
+      "data-completed-button-url": this.completedButton.url,
       "data-background-color": this.backgroundColor,
     });
   },

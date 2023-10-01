@@ -7,6 +7,11 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    host: {
+      type: String,
+      required: false,
+      default: "cdn.docuseal.co",
+    },
     backgroundColor: {
       type: String,
       required: false,
@@ -21,7 +26,7 @@ export default defineComponent({
 
       script.id = scriptId;
       script.async = true;
-      script.src = "https://cdn.docuseal.co/js/builder.js";
+      script.src = `https://${this.host}/js/builder.js`;
 
       document.head.appendChild(script);
     }
