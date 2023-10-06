@@ -8,6 +8,12 @@ export default defineComponent({
       required: false,
       default: "",
     },
+    role: {
+      type: String,
+      required: false,
+      default: "",
+    },
+    // Backward compatibility
     submitter: {
       type: String,
       required: false,
@@ -66,6 +72,7 @@ export default defineComponent({
     return h("docuseal-form", {
       "data-src": this.src,
       "data-email": this.email,
+      "data-role": this.role,
       "data-submitter": this.submitter,
       "data-expand": this.expand,
       "data-go-to-last": this.goToLast,
