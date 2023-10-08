@@ -44,6 +44,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    skipFields: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
     values: {
       type: Object,
       required: false,
@@ -76,6 +81,7 @@ export default defineComponent({
       "data-submitter": this.submitter,
       "data-expand": this.expand,
       "data-go-to-last": this.goToLast,
+      "data-skip-fields": this.skipFields,
       "data-values": JSON.stringify(this.values),
       "data-readonly-fields": this.readonlyFields.join(","),
       "data-completed-button-title": this.completedButton.title,
