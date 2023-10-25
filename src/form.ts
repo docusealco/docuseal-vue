@@ -60,6 +60,7 @@ export default defineComponent({
       default: () => [],
     },
   },
+  emits: ['complete'],
   mounted() {
     const scriptId = "docuseal-form-script";
 
@@ -72,6 +73,8 @@ export default defineComponent({
 
       document.head.appendChild(script);
     }
+
+    this.$el.addEventListener('completed', (e: CustomEvent) => this.$emit('complete', e.detail))
   },
   render() {
     return h("docuseal-form", {
