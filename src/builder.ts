@@ -12,6 +12,21 @@ export default defineComponent({
       required: false,
       default: "cdn.docuseal.co",
     },
+    withRecipientsButton: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    withSignYourselfButton: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    customButton: {
+      type: Object,
+      required: false,
+      default: () => ({ title: "", url: "" }),
+    },
     backgroundColor: {
       type: String,
       required: false,
@@ -35,6 +50,10 @@ export default defineComponent({
     return h("docuseal-builder", {
       "data-token": this.token,
       "data-background-color": this.backgroundColor,
+      "data-custom-button-title": this.customButton.title,
+      "data-custom-button-url": this.customButton.url,
+      "data-with-recipients-button": this.withRecipientsButton,
+      "data-with-sign-yourself-button": this.withSignYourselfButton,
     });
   },
 });
