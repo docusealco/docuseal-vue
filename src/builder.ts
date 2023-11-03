@@ -12,6 +12,11 @@ export default defineComponent({
       required: false,
       default: "cdn.docuseal.co",
     },
+    preview: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     withRecipientsButton: {
       type: Boolean,
       required: false,
@@ -49,6 +54,7 @@ export default defineComponent({
   render() {
     return h("docuseal-builder", {
       "data-token": this.token,
+      "data-preview": this.preview,
       "data-background-color": this.backgroundColor,
       "data-custom-button-title": this.customButton.title,
       "data-custom-button-url": this.customButton.url,
