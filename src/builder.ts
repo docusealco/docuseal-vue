@@ -22,6 +22,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    withUploadButton: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
     withSignYourselfButton: {
       type: Boolean,
       required: false,
@@ -59,6 +64,7 @@ export default defineComponent({
       "data-custom-button-title": this.customButton.title,
       "data-custom-button-url": this.customButton.url,
       "data-with-recipients-button": this.withRecipientsButton,
+      "data-with-upload-button": this.withUploadButton,
       "data-with-sign-yourself-button": this.withSignYourselfButton,
     });
   },
