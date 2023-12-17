@@ -70,7 +70,7 @@ export default defineComponent({
     return h("docuseal-builder", {
       "data-token": this.token,
       "data-preview": this.preview,
-      "data-roles": this.roles.join(','),
+      "data-roles": this.roles.join(","),
       "data-fields": JSON.stringify(this.fields),
       "data-background-color": this.backgroundColor,
       "data-custom-button-title": this.customButton.title,

@@ -34,6 +34,26 @@ export default defineComponent({
       required: false,
       default: "",
     },
+    withTitle: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    withSendCopyButton: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    withDownloadButton: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    allowToResubmit: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
     completedButton: {
       type: Object,
       required: false,
@@ -82,10 +102,13 @@ export default defineComponent({
     return h("docuseal-form", {
       "data-src": this.src,
       "data-email": this.email,
-      "data-role": this.role,
-      "data-submitter": this.submitter,
+      "data-role": this.role || this.submitter,
       "data-expand": this.expand,
       "data-go-to-last": this.goToLast,
+      "data-with-title": this.withTitle,
+      "data-with-download-button": this.withDownloadButton,
+      "data-allow-to-resubmit": this.allowToResubmit,
+      "data-with-send-copy-button": this.withSendCopyButton,
       "data-skip-fields": this.skipFields,
       "data-values": JSON.stringify(this.values),
       "data-readonly-fields": this.readonlyFields.join(","),
