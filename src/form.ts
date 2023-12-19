@@ -24,6 +24,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    preview: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     email: {
       type: String,
       required: false,
@@ -104,6 +109,7 @@ export default defineComponent({
       "data-email": this.email,
       "data-role": this.role || this.submitter,
       "data-expand": this.expand,
+      "data-preview": this.preview,
       "data-go-to-last": this.goToLast,
       "data-with-title": this.withTitle,
       "data-with-download-button": this.withDownloadButton,
