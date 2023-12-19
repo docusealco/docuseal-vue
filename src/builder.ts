@@ -53,6 +53,7 @@ export default defineComponent({
       default: "",
     },
   },
+  emits: ["load", "upload", "send", "init"],
   mounted() {
     const scriptId = "docuseal-builder-script";
 
@@ -65,6 +66,20 @@ export default defineComponent({
 
       document.head.appendChild(script);
     }
+
+    this.$el.addEventListener("load", (e: CustomEvent) =>
+      this.$emit("load", e.detail),
+    );
+
+    this.$el.addEventListener("upload", (e: CustomEvent) =>
+      this.$emit("upload", e.detail),
+    );
+
+    this.$el.addEventListener("send", (e: CustomEvent) =>
+      this.$emit("send", e.detail),
+    );
+
+    this.$el.addEventListener("init", () => this.$emit("init"));
   },
   render() {
     return h("docuseal-builder", {
