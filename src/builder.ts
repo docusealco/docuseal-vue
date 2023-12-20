@@ -42,6 +42,16 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    withDocumentsList: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    withFieldsList: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
     customButton: {
       type: Object,
       required: false,
@@ -92,6 +102,8 @@ export default defineComponent({
       "data-custom-button-url": this.customButton.url,
       "data-with-recipients-button": this.withRecipientsButton,
       "data-with-upload-button": this.withUploadButton,
+      "data-with-documents-list": this.withDocumentsList,
+      "data-with-fields-list": this.withFieldsList,
       "data-with-sign-yourself-button": this.withSignYourselfButton,
     });
   },
