@@ -72,7 +72,7 @@ export default defineComponent({
     skipFields: {
       type: Boolean,
       required: false,
-      default: true,
+      default: false,
     },
     values: {
       type: Object,
