@@ -17,6 +17,11 @@ export default defineComponent({
       required: false,
       default: false,
     },
+    autosave: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
     fields: {
       type: Array,
       required: false,
@@ -57,6 +62,16 @@ export default defineComponent({
       required: false,
       default: () => ({ title: "", url: "" }),
     },
+    sendButtonText: {
+      type: String,
+      required: false,
+      default: "",
+    },
+    saveButtonText: {
+      type: String,
+      required: false,
+      default: "",
+    },
     backgroundColor: {
       type: String,
       required: false,
@@ -95,6 +110,9 @@ export default defineComponent({
     return h("docuseal-builder", {
       "data-token": this.token,
       "data-preview": this.preview,
+      "data-autosave": this.autosave,
+      "data-send-button-text": this.sendButtonText,
+      "data-save-button-text": this.saveButtonText,
       "data-roles": this.roles.join(","),
       "data-fields": JSON.stringify(this.fields),
       "data-background-color": this.backgroundColor,
