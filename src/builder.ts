@@ -12,6 +12,11 @@ export default defineComponent({
       required: false,
       default: "cdn.docuseal.co",
     },
+    language: {
+      type: String,
+      required: false,
+      default: "en",
+    },
     preview: {
       type: Boolean,
       required: false,
@@ -110,6 +115,7 @@ export default defineComponent({
     return h("docuseal-builder", {
       "data-token": this.token,
       "data-preview": this.preview,
+      "data-language": this.language,
       "data-autosave": this.autosave,
       "data-send-button-text": this.sendButtonText,
       "data-save-button-text": this.saveButtonText,
