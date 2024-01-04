@@ -84,6 +84,11 @@ export default defineComponent({
       required: false,
       default: () => [],
     },
+    customCss: {
+      type: String,
+      required: false,
+      default: ""
+    },
   },
   emits: ["complete"],
   mounted() {
@@ -121,6 +126,7 @@ export default defineComponent({
       "data-completed-button-title": this.completedButton.title,
       "data-completed-button-url": this.completedButton.url,
       "data-background-color": this.backgroundColor,
+      "data-custom-css": this.customCss,
     });
   },
 });

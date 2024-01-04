@@ -82,6 +82,11 @@ export default defineComponent({
       required: false,
       default: "",
     },
+    customCss: {
+      type: String,
+      required: false,
+      default: "",
+    },
   },
   emits: ["load", "upload", "send", "init"],
   mounted() {
@@ -129,6 +134,7 @@ export default defineComponent({
       "data-with-documents-list": this.withDocumentsList,
       "data-with-fields-list": this.withFieldsList,
       "data-with-sign-yourself-button": this.withSignYourselfButton,
+      "data-custom-css": this.customCss,
     });
   },
 });
