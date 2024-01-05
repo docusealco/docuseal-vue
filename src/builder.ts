@@ -42,6 +42,16 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    withSendButton: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
+    withFieldTypes: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
     withUploadButton: {
       type: Boolean,
       required: false,
@@ -130,6 +140,8 @@ export default defineComponent({
       "data-custom-button-title": this.customButton.title,
       "data-custom-button-url": this.customButton.url,
       "data-with-recipients-button": this.withRecipientsButton,
+      "data-with-send-button": this.withSendButton,
+      "data-with-field-types": this.withFieldTypes,
       "data-with-upload-button": this.withUploadButton,
       "data-with-documents-list": this.withDocumentsList,
       "data-with-fields-list": this.withFieldsList,
