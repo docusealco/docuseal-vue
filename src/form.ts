@@ -59,6 +59,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    allowTypedSignature: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
     completedButton: {
       type: Object,
       required: false,
@@ -119,6 +124,7 @@ export default defineComponent({
       "data-with-title": this.withTitle,
       "data-with-download-button": this.withDownloadButton,
       "data-allow-to-resubmit": this.allowToResubmit,
+      "data-allow-typed-signature": this.allowTypedSignature,
       "data-with-send-copy-button": this.withSendCopyButton,
       "data-skip-fields": this.skipFields,
       "data-values": JSON.stringify(this.values),
