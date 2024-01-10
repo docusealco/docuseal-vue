@@ -37,6 +37,11 @@ export default defineComponent({
       required: false,
       default: () => [],
     },
+    fieldTypes: {
+      type: Array,
+      required: false,
+      default: () => [],
+    },
     withRecipientsButton: {
       type: Boolean,
       required: false,
@@ -135,6 +140,7 @@ export default defineComponent({
       "data-send-button-text": this.sendButtonText,
       "data-save-button-text": this.saveButtonText,
       "data-roles": this.roles.join(","),
+      "data-field-types": this.fieldTypes.join(","),
       "data-fields": JSON.stringify(this.fields),
       "data-background-color": this.backgroundColor,
       "data-custom-button-title": this.customButton.title,
