@@ -39,6 +39,16 @@ export default defineComponent({
       required: false,
       default: "",
     },
+    applicationKey: {
+      type: String,
+      required: false,
+      default: "",
+    },
+    completedRedirectUrl: {
+      type: String,
+      required: false,
+      default: "",
+    },
     withTitle: {
       type: Boolean,
       required: false,
@@ -122,6 +132,8 @@ export default defineComponent({
       "data-preview": this.preview,
       "data-go-to-last": this.goToLast,
       "data-with-title": this.withTitle,
+      "data-application-key": this.applicationKey,
+      "data-completed-redirect-url": this.completedRedirectUrl,
       "data-with-download-button": this.withDownloadButton,
       "data-allow-to-resubmit": this.allowToResubmit,
       "data-allow-typed-signature": this.allowTypedSignature,
