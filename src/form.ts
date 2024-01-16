@@ -8,6 +8,11 @@ export default defineComponent({
       required: false,
       default: "",
     },
+    host: {
+      type: String,
+      required: false,
+      default: "cdn.docuseal.co",
+    },
     role: {
       type: String,
       required: false,
@@ -114,7 +119,7 @@ export default defineComponent({
 
       script.id = scriptId;
       script.async = true;
-      script.src = "https://cdn.docuseal.co/js/form.js";
+      script.src = `https://${this.host}/js/form.js`;
 
       document.head.appendChild(script);
     }
