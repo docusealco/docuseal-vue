@@ -47,6 +47,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    withTitle: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
     withSendButton: {
       type: Boolean,
       required: false,
@@ -147,6 +152,7 @@ export default defineComponent({
       "data-custom-button-url": this.customButton.url,
       "data-with-recipients-button": this.withRecipientsButton,
       "data-with-send-button": this.withSendButton,
+      "data-with-title": this.withTitle,
       "data-only-defined-fields": this.onlyDefinedFields,
       "data-with-upload-button": this.withUploadButton,
       "data-with-documents-list": this.withDocumentsList,
