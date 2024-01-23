@@ -52,6 +52,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    sendCopyEmail: {
+      type: Boolean,
+      required: false,
+      default: null,
+    },
     withSendButton: {
       type: Boolean,
       required: false,
@@ -144,6 +149,7 @@ export default defineComponent({
       "data-autosave": this.autosave,
       "data-send-button-text": this.sendButtonText,
       "data-save-button-text": this.saveButtonText,
+      "data-send-copy-email": this.sendCopyEmail,
       "data-roles": this.roles.join(","),
       "data-field-types": this.fieldTypes.join(","),
       "data-fields": JSON.stringify(this.fields),
