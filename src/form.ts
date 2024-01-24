@@ -59,6 +59,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    withFieldNames: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
     withSendCopyButton: {
       type: Boolean,
       required: false,
@@ -137,6 +142,7 @@ export default defineComponent({
       "data-preview": this.preview,
       "data-go-to-last": this.goToLast,
       "data-with-title": this.withTitle,
+      "data-with-field-names": this.withFieldNames,
       "data-application-key": this.applicationKey,
       "data-completed-redirect-url": this.completedRedirectUrl,
       "data-with-download-button": this.withDownloadButton,
