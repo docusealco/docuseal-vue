@@ -18,6 +18,16 @@ export default defineComponent({
       required: false,
       default: "",
     },
+    logo: {
+      type: String,
+      required: false,
+      default: "",
+    },
+    language: {
+      type: String,
+      required: false,
+      default: "",
+    },
     // Backward compatibility
     submitter: {
       type: String,
@@ -142,6 +152,8 @@ export default defineComponent({
       "data-preview": this.preview,
       "data-go-to-last": this.goToLast,
       "data-with-title": this.withTitle,
+      "data-logo": this.logo,
+      "data-language": this.language,
       "data-with-field-names": this.withFieldNames,
       "data-application-key": this.applicationKey,
       "data-completed-redirect-url": this.completedRedirectUrl,
