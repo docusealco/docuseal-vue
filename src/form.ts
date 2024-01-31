@@ -59,6 +59,11 @@ export default defineComponent({
       required: false,
       default: "",
     },
+    externalId: {
+      type: String,
+      required: false,
+      default: "",
+    },
     completedRedirectUrl: {
       type: String,
       required: false,
@@ -155,7 +160,7 @@ export default defineComponent({
       "data-logo": this.logo,
       "data-language": this.language,
       "data-with-field-names": this.withFieldNames,
-      "data-application-key": this.applicationKey,
+      "data-external-id": this.externalId || this.applicationKey,
       "data-completed-redirect-url": this.completedRedirectUrl,
       "data-with-download-button": this.withDownloadButton,
       "data-allow-to-resubmit": this.allowToResubmit,
