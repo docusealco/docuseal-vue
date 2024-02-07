@@ -137,10 +137,10 @@ export default defineComponent({
     customCss: {
       type: String,
       required: false,
-      default: ""
+      default: "",
     },
   },
-  emits: ["complete"],
+  emits: ["complete", "init", "load"],
   mounted() {
     const scriptId = "docuseal-form-script";
 
@@ -154,9 +154,17 @@ export default defineComponent({
       document.head.appendChild(script);
     }
 
-    this.$el.addEventListener("completed", (e: CustomEvent) =>
-      this.$emit("complete", e.detail),
-    );
+    this.$el.addEventListener("completed", (e: CustomEvent) => {
+      this.$emit("complete", e.detail);
+    });
+
+    this.$el.addEventListener("load", (e: CustomEvent) => {
+      this.$emit("load", e.detail);
+    });
+
+    this.$el.addEventListener("init", () => {
+      this.$emit("init");
+    });
   },
   render() {
     return h("docuseal-form", {
