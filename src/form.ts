@@ -119,6 +119,11 @@ export default defineComponent({
       required: false,
       default: () => ({}),
     },
+    i18n: {
+      type: Object,
+      required: false,
+      default: () => ({}),
+    },
     metadata: {
       type: Object,
       required: false,
@@ -186,6 +191,7 @@ export default defineComponent({
       "data-with-send-copy-button": this.withSendCopyButton,
       "data-skip-fields": this.skipFields,
       "data-values": JSON.stringify(this.values),
+      "data-i18n": JSON.stringify(this.i18n),
       "data-metadata": JSON.stringify(this.metadata),
       "data-fields": JSON.stringify(this.fields),
       "data-readonly-fields": this.readonlyFields.join(","),

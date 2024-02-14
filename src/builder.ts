@@ -32,6 +32,11 @@ export default defineComponent({
       required: false,
       default: () => [],
     },
+    i18n: {
+      type: Object,
+      required: false,
+      default: () => ({}),
+    },
     roles: {
       type: Array,
       required: false,
@@ -159,6 +164,7 @@ export default defineComponent({
       "data-with-recipients-button": this.withRecipientsButton,
       "data-with-send-button": this.withSendButton,
       "data-with-title": this.withTitle,
+      "data-with-i18n": this.i18n,
       "data-only-defined-fields": this.onlyDefinedFields,
       "data-with-upload-button": this.withUploadButton,
       "data-with-documents-list": this.withDocumentsList,
