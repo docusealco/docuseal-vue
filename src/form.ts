@@ -84,6 +84,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    sendCopyEmail: {
+      type: Boolean,
+      required: false,
+      default: null,
+    },
     withDownloadButton: {
       type: Boolean,
       required: false,
@@ -189,6 +194,7 @@ export default defineComponent({
       "data-allow-to-resubmit": this.allowToResubmit,
       "data-allow-typed-signature": this.allowTypedSignature,
       "data-with-send-copy-button": this.withSendCopyButton,
+      "data-send-copy-email": this.sendCopyEmail,
       "data-skip-fields": this.skipFields,
       "data-values": JSON.stringify(this.values),
       "data-i18n": JSON.stringify(this.i18n),
