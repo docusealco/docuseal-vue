@@ -47,6 +47,11 @@ export default defineComponent({
       required: false,
       default: () => [],
     },
+    drawFieldType: {
+      type: String,
+      required: false,
+      default: 'text',
+    },
     withRecipientsButton: {
       type: Boolean,
       required: false,
@@ -157,6 +162,7 @@ export default defineComponent({
       "data-send-copy-email": this.sendCopyEmail,
       "data-roles": this.roles.join(","),
       "data-field-types": this.fieldTypes.join(","),
+      "data-draw-field-type": this.drawFieldType,
       "data-fields": JSON.stringify(this.fields),
       "data-background-color": this.backgroundColor,
       "data-custom-button-title": this.customButton.title,
