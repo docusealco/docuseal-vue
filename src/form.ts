@@ -119,6 +119,11 @@ export default defineComponent({
       required: false,
       default: false,
     },
+    autoscrollFields: {
+      type: Boolean,
+      required: false,
+      default: true,
+    },
     values: {
       type: Object,
       required: false,
@@ -196,6 +201,7 @@ export default defineComponent({
       "data-with-send-copy-button": this.withSendCopyButton,
       "data-send-copy-email": this.sendCopyEmail,
       "data-skip-fields": this.skipFields,
+      "data-autoscroll-fields": this.autoscrollFields,
       "data-values": JSON.stringify(this.values),
       "data-i18n": JSON.stringify(this.i18n),
       "data-metadata": JSON.stringify(this.metadata),
