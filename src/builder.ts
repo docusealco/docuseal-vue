@@ -32,6 +32,11 @@ export default defineComponent({
       required: false,
       default: () => [],
     },
+    requiredFields: {
+      type: Array,
+      required: false,
+      default: () => [],
+    },
     i18n: {
       type: Object,
       required: false,
@@ -50,7 +55,7 @@ export default defineComponent({
     drawFieldType: {
       type: String,
       required: false,
-      default: 'text',
+      default: "text",
     },
     withRecipientsButton: {
       type: Boolean,
@@ -123,7 +128,7 @@ export default defineComponent({
       default: "",
     },
   },
-  emits: ["load", "upload", "send", "init"],
+  emits: ["load", "upload", "send", "init", "change", "save"],
   mounted() {
     const scriptId = "docuseal-builder-script";
 
@@ -149,6 +154,14 @@ export default defineComponent({
       this.$emit("send", e.detail),
     );
 
+    this.$el.addEventListener("save", (e: CustomEvent) =>
+      this.$emit("save", e.detail),
+    );
+
+    this.$el.addEventListener("change", (e: CustomEvent) =>
+      this.$emit("change", e.detail),
+    );
+
     this.$el.addEventListener("init", () => this.$emit("init"));
   },
   render() {
@@ -164,6 +177,7 @@ export default defineComponent({
       "data-field-types": this.fieldTypes.join(","),
       "data-draw-field-type": this.drawFieldType,
       "data-fields": JSON.stringify(this.fields),
+      "data-required-fields": JSON.stringify(this.requiredFields),
       "data-background-color": this.backgroundColor,
       "data-custom-button-title": this.customButton.title,
       "data-custom-button-url": this.customButton.url,
