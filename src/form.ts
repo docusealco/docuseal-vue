@@ -39,6 +39,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    minimize: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     preview: {
       type: Boolean,
       required: false,
@@ -187,6 +192,7 @@ export default defineComponent({
       "data-email": this.email,
       "data-role": this.role || this.submitter,
       "data-expand": this.expand,
+      "data-minimize": this.minimize,
       "data-preview": this.preview,
       "data-go-to-last": this.goToLast,
       "data-with-title": this.withTitle,
