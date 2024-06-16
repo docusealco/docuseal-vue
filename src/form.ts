@@ -109,6 +109,16 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    signature: {
+      type: String,
+      required: false,
+      default: '',
+    },
+    rememberSignature: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     completedButton: {
       type: Object,
       required: false,
@@ -204,6 +214,8 @@ export default defineComponent({
       "data-with-download-button": this.withDownloadButton,
       "data-allow-to-resubmit": this.allowToResubmit,
       "data-allow-typed-signature": this.allowTypedSignature,
+      "data-signature": this.signature,
+      "data-with-signature": this.rememberSignature,
       "data-with-send-copy-button": this.withSendCopyButton,
       "data-send-copy-email": this.sendCopyEmail,
       "data-skip-fields": this.skipFields,
