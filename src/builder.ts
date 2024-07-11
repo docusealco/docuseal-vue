@@ -87,6 +87,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    withAddPageButton: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     withSignYourselfButton: {
       type: Boolean,
       required: false,
@@ -187,6 +192,7 @@ export default defineComponent({
       "data-with-i18n": this.i18n,
       "data-only-defined-fields": this.onlyDefinedFields,
       "data-with-upload-button": this.withUploadButton,
+      "data-with-add-page-button": this.withAddPageButton,
       "data-with-documents-list": this.withDocumentsList,
       "data-with-fields-list": this.withFieldsList,
       "data-with-sign-yourself-button": this.withSignYourselfButton,
