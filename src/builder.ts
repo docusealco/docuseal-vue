@@ -22,6 +22,16 @@ export default defineComponent({
       required: false,
       default: false,
     },
+    previewMode: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    inputMode: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     autosave: {
       type: Boolean,
       required: false,
@@ -177,7 +187,8 @@ export default defineComponent({
   render() {
     return h("docuseal-builder", {
       "data-token": this.token,
-      "data-preview": this.preview,
+      "data-preview": this.preview || this.previewMode,
+      "data-input-mode": this.inputMode,
       "data-language": this.language,
       "data-autosave": this.autosave,
       "data-send-button-text": this.sendButtonText,
