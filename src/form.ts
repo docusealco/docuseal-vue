@@ -84,6 +84,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    withFieldPlaceholder: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     withSendCopyButton: {
       type: Boolean,
       required: false,
@@ -209,6 +214,7 @@ export default defineComponent({
       "data-logo": this.logo,
       "data-language": this.language,
       "data-with-field-names": this.withFieldNames,
+      "data-with-field-placeholder": this.withFieldPlaceholder,
       "data-external-id": this.externalId || this.applicationKey,
       "data-completed-redirect-url": this.completedRedirectUrl,
       "data-with-download-button": this.withDownloadButton,
