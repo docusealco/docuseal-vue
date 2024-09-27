@@ -79,6 +79,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    withDecline: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     withFieldNames: {
       type: Boolean,
       required: false,
@@ -175,7 +180,7 @@ export default defineComponent({
       default: "",
     },
   },
-  emits: ["complete", "init", "load"],
+  emits: ["complete", "init", "load", "decline"],
   mounted() {
     const scriptId = "docuseal-form-script";
 
@@ -191,6 +196,10 @@ export default defineComponent({
 
     this.$el.addEventListener("completed", (e: CustomEvent) => {
       this.$emit("complete", e.detail);
+    });
+
+    this.$el.addEventListener("declined", (e: CustomEvent) => {
+      this.$emit("decline", e.detail);
     });
 
     this.$el.addEventListener("load", (e: CustomEvent) => {
@@ -211,6 +220,7 @@ export default defineComponent({
       "data-preview": this.preview,
       "data-go-to-last": this.goToLast,
       "data-with-title": this.withTitle,
+      "data-with-decline": this.withDecline,
       "data-logo": this.logo,
       "data-language": this.language,
       "data-with-field-names": this.withFieldNames,
