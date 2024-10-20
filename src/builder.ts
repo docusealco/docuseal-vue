@@ -10,7 +10,7 @@ export default defineComponent({
     host: {
       type: String,
       required: false,
-      default: "cdn.docuseal.co",
+      default: "cdn.docuseal.com",
     },
     language: {
       type: String,
