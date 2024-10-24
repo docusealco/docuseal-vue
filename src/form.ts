@@ -231,7 +231,7 @@ export default defineComponent({
       "data-allow-to-resubmit": this.allowToResubmit,
       "data-allow-typed-signature": this.allowTypedSignature,
       "data-signature": this.signature,
-      "data-with-signature": this.rememberSignature,
+      "data-remember-signature": this.rememberSignature,
       "data-with-send-copy-button": this.withSendCopyButton,
       "data-send-copy-email": this.sendCopyEmail,
       "data-skip-fields": this.skipFields,
