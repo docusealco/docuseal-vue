@@ -42,6 +42,11 @@ export default defineComponent({
       required: false,
       default: () => [],
     },
+    submitters: {
+      type: Array,
+      required: false,
+      default: () => [],
+    },
     requiredFields: {
       type: Array,
       required: false,
@@ -198,6 +203,7 @@ export default defineComponent({
       "data-field-types": this.fieldTypes.join(","),
       "data-draw-field-type": this.drawFieldType,
       "data-fields": JSON.stringify(this.fields),
+      "data-submitters": JSON.stringify(this.submitters),
       "data-required-fields": JSON.stringify(this.requiredFields),
       "data-background-color": this.backgroundColor,
       "data-custom-button-title": this.customButton.title,
