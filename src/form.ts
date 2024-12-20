@@ -39,6 +39,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    orderAsOnPage: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     minimize: {
       type: Boolean,
       required: false,
@@ -216,6 +221,7 @@ export default defineComponent({
       "data-email": this.email,
       "data-role": this.role || this.submitter,
       "data-expand": this.expand,
+      "data-order-as-on-page": this.orderAsOnPage,
       "data-minimize": this.minimize,
       "data-preview": this.preview,
       "data-go-to-last": this.goToLast,
