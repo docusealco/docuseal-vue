@@ -132,6 +132,11 @@ export default defineComponent({
       required: false,
       default: () => ({ title: "", url: "" }),
     },
+    emailMessage: {
+      type: Object,
+      required: false,
+      default: () => ({ subject: "", body: "" }),
+    },
     sendButtonText: {
       type: String,
       required: false,
@@ -208,6 +213,8 @@ export default defineComponent({
       "data-background-color": this.backgroundColor,
       "data-custom-button-title": this.customButton.title,
       "data-custom-button-url": this.customButton.url,
+      "data-email-subject": this.emailMessage.subject,
+      "data-email-body": this.emailMessage.body,
       "data-with-recipients-button": this.withRecipientsButton,
       "data-with-send-button": this.withSendButton,
       "data-with-title": this.withTitle,

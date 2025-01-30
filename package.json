@@ -1,11 +1,11 @@
 {
   "name": "@docuseal/vue",
-  "version": "1.0.44",
+  "version": "1.0.45",
   "description": "DocuSeal Vue components to integrate documents signing process into apps. ✍️",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
-  "author": "Alex Turchyn <alex@docuseal.com>",
+  "author": "DocuSeal <support@docuseal.com>",
   "license": "MIT",
   "homepage": "https://www.docuseal.com/docs/embedded",
   "bugs": {
