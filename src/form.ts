@@ -59,6 +59,11 @@ export default defineComponent({
       required: false,
       default: "",
     },
+    name: {
+      type: String,
+      required: false,
+      default: "",
+    },
     backgroundColor: {
       type: String,
       required: false,
@@ -133,6 +138,11 @@ export default defineComponent({
       type: Boolean,
       required: false,
       default: false,
+    },
+    reuseSignature: {
+      type: Boolean,
+      required: false,
+      default: true,
     },
     completedButton: {
       type: Object,
@@ -219,6 +229,7 @@ export default defineComponent({
     return h("docuseal-form", {
       "data-src": this.src,
       "data-email": this.email,
+      "data-name": this.name,
       "data-role": this.role || this.submitter,
       "data-expand": this.expand,
       "data-order-as-on-page": this.orderAsOnPage,
@@ -238,6 +249,7 @@ export default defineComponent({
       "data-allow-typed-signature": this.allowTypedSignature,
       "data-signature": this.signature,
       "data-remember-signature": this.rememberSignature,
+      "data-reuse-signature": this.reuseSignature,
       "data-with-send-copy-button": this.withSendCopyButton,
       "data-send-copy-email": this.sendCopyEmail,
       "data-skip-fields": this.skipFields,
