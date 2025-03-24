@@ -109,6 +109,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    withCompleteButton: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     sendCopyEmail: {
       type: Boolean,
       required: false,
@@ -251,6 +256,7 @@ export default defineComponent({
       "data-remember-signature": this.rememberSignature,
       "data-reuse-signature": this.reuseSignature,
       "data-with-send-copy-button": this.withSendCopyButton,
+      "data-with-complete-button": this.withCompleteButton,
       "data-send-copy-email": this.sendCopyEmail,
       "data-skip-fields": this.skipFields,
       "data-autoscroll-fields": this.autoscrollFields,
