@@ -149,6 +149,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    completedMessage: {
+      type: Object,
+      required: false,
+      default: () => ({}),
+    },
     completedButton: {
       type: Object,
       required: false,
@@ -265,6 +270,8 @@ export default defineComponent({
       "data-metadata": JSON.stringify(this.metadata),
       "data-fields": JSON.stringify(this.fields),
       "data-readonly-fields": this.readonlyFields.join(","),
+      "data-completed-message-title": this.completedMessage.title,
+      "data-completed-message-body": this.completedMessage.body,
       "data-completed-button-title": this.completedButton.title,
       "data-completed-button-url": this.completedButton.url,
       "data-background-color": this.backgroundColor,
