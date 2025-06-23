@@ -8,6 +8,11 @@ export default defineComponent({
       required: false,
       default: "",
     },
+    token: {
+      type: String,
+      required: false,
+      default: "",
+    },
     host: {
       type: String,
       required: false,
@@ -238,6 +243,7 @@ export default defineComponent({
   render() {
     return h("docuseal-form", {
       "data-src": this.src,
+      "data-token": this.token,
       "data-email": this.email,
       "data-name": this.name,
       "data-role": this.role || this.submitter,
