@@ -92,6 +92,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    withSignatureId: {
+      type: Boolean,
+      required: false,
+      default: null,
+    },
     onlyDefinedFields: {
       type: Boolean,
       required: false,
@@ -224,6 +229,7 @@ export default defineComponent({
       "data-with-add-page-button": this.withAddPageButton,
       "data-with-documents-list": this.withDocumentsList,
       "data-with-fields-list": this.withFieldsList,
+      "data-with-signature-id": this.withSignatureId,
       "data-with-field-placeholder": this.withFieldPlaceholder,
       "data-with-sign-yourself-button": this.withSignYourselfButton,
       "data-custom-css": this.customCss,
