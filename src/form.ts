@@ -59,6 +59,11 @@ export default defineComponent({
       required: false,
       default: false,
     },
+    dryRun: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     email: {
       type: String,
       required: false,
@@ -251,6 +256,7 @@ export default defineComponent({
       "data-order-as-on-page": this.orderAsOnPage,
       "data-minimize": this.minimize,
       "data-preview": this.preview,
+      "data-dry-run": this.dryRun,
       "data-go-to-last": this.goToLast,
       "data-with-title": this.withTitle,
       "data-with-decline": this.withDecline,
