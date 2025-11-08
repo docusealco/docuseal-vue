@@ -122,6 +122,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    withFieldsDetection: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     withFieldPlaceholder: {
       type: Boolean,
       required: false,
@@ -223,6 +228,7 @@ export default defineComponent({
       "data-with-add-page-button": this.withAddPageButton,
       "data-with-documents-list": this.withDocumentsList,
       "data-with-fields-list": this.withFieldsList,
+      "data-with-fields-detection": this.withFieldsDetection,
       "data-with-signature-id": this.withSignatureId,
       "data-with-field-placeholder": this.withFieldPlaceholder,
       "data-with-sign-yourself-button": this.withSignYourselfButton,
