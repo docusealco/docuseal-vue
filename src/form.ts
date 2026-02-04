@@ -134,6 +134,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    onlyRequiredFields: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     allowToResubmit: {
       type: Boolean,
       required: false,
@@ -267,6 +272,7 @@ export default defineComponent({
       "data-external-id": this.externalId || this.applicationKey,
       "data-completed-redirect-url": this.completedRedirectUrl,
       "data-with-download-button": this.withDownloadButton,
+      "data-only-required-fields": this.onlyRequiredFields,
       "data-allow-to-resubmit": this.allowToResubmit,
       "data-allow-typed-signature": this.allowTypedSignature,
       "data-signature": this.signature,
