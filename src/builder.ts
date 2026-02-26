@@ -132,6 +132,11 @@ export default defineComponent({
       required: false,
       default: false,
     },
+    withPrefillable: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     customButton: {
       type: Object,
       required: false,
@@ -231,6 +236,7 @@ export default defineComponent({
       "data-with-fields-detection": this.withFieldsDetection,
       "data-with-signature-id": this.withSignatureId,
       "data-with-field-placeholder": this.withFieldPlaceholder,
+      "data-with-prefillable": this.withPrefillable,
       "data-with-sign-yourself-button": this.withSignYourselfButton,
       "data-custom-css": this.customCss,
     });
