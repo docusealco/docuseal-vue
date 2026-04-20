@@ -117,6 +117,11 @@ export default defineComponent({
       required: false,
       default: true,
     },
+    withDynamicDocuments: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     withFieldsList: {
       type: Boolean,
       required: false,
@@ -232,6 +237,7 @@ export default defineComponent({
       "data-with-upload-button": this.withUploadButton,
       "data-with-add-page-button": this.withAddPageButton,
       "data-with-documents-list": this.withDocumentsList,
+      "data-with-dynamic-documents": this.withDynamicDocuments,
       "data-with-fields-list": this.withFieldsList,
       "data-with-fields-detection": this.withFieldsDetection,
       "data-with-signature-id": this.withSignatureId,
