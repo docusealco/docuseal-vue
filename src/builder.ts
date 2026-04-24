@@ -67,6 +67,11 @@ export default defineComponent({
       required: false,
       default: () => [],
     },
+    dateFormats: {
+      type: Array,
+      required: false,
+      default: () => [],
+    },
     drawFieldType: {
       type: String,
       required: false,
@@ -138,6 +143,11 @@ export default defineComponent({
       default: false,
     },
     withPrefillable: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    withCustomFieldsTab: {
       type: Boolean,
       required: false,
       default: false,
@@ -224,6 +234,7 @@ export default defineComponent({
       "data-fields": JSON.stringify(this.fields),
       "data-submitters": JSON.stringify(this.submitters),
       "data-required-fields": JSON.stringify(this.requiredFields),
+      "data-date-formats": this.dateFormats.join(","),
       "data-background-color": this.backgroundColor,
       "data-custom-button-title": this.customButton.title,
       "data-custom-button-url": this.customButton.url,
@@ -243,6 +254,7 @@ export default defineComponent({
       "data-with-signature-id": this.withSignatureId,
       "data-with-field-placeholder": this.withFieldPlaceholder,
       "data-with-prefillable": this.withPrefillable,
+      "data-with-custom-fields-tab": this.withCustomFieldsTab,
       "data-with-sign-yourself-button": this.withSignYourselfButton,
       "data-custom-css": this.customCss,
     });
