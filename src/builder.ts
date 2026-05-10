@@ -147,6 +147,11 @@ export default defineComponent({
       required: false,
       default: false,
     },
+    withRevisions: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
     withCustomFieldsTab: {
       type: Boolean,
       required: false,
@@ -254,6 +259,7 @@ export default defineComponent({
       "data-with-signature-id": this.withSignatureId,
       "data-with-field-placeholder": this.withFieldPlaceholder,
       "data-with-prefillable": this.withPrefillable,
+      "data-with-revisions": this.withRevisions,
       "data-with-custom-fields-tab": this.withCustomFieldsTab,
       "data-with-sign-yourself-button": this.withSignYourselfButton,
       "data-custom-css": this.customCss,
