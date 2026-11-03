@@ -188,7 +188,7 @@ export default defineComponent({
       default: "",
     },
   },
-  emits: ["load", "upload", "send", "init", "change", "save"],
+  emits: ["load", "upload", "send", "init", "change", "save", "error"],
   mounted() {
     const scriptId = "docuseal-builder-script";
 
@@ -223,6 +223,10 @@ export default defineComponent({
     );
 
     this.$el.addEventListener("init", () => this.$emit("init"));
+
+    this.$el.addEventListener("error", (e: CustomEvent) =>
+      this.$emit("error", e.detail),
+    );
   },
   render() {
     return h("docuseal-builder", {

@@ -220,7 +220,7 @@ export default defineComponent({
       default: "",
     },
   },
-  emits: ["complete", "init", "load", "decline"],
+  emits: ["complete", "init", "load", "decline", "error"],
   mounted() {
     const scriptId = "docuseal-form-script";
 
@@ -248,6 +248,10 @@ export default defineComponent({
 
     this.$el.addEventListener("init", () => {
       this.$emit("init");
+    });
+
+    this.$el.addEventListener("error", (e: CustomEvent) => {
+      this.$emit("error", e.detail);
     });
   },
   render() {
